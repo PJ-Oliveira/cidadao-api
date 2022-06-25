@@ -12,15 +12,15 @@ public class CidadaoService {
     @Autowired
     private CidadaoRepository userRepository;
 
-    public Cidadao createUser(Cidadao cidadao){
+    public Cidadao create(Cidadao cidadao){
         return userRepository.save(cidadao);
     }
 
-    public Cidadao getUserById(int id){
+    public Cidadao getById(int id){
         return userRepository.findById(id).orElse(null);
     }
 
-    public List<Cidadao> getAllUsers(){
+    public List<Cidadao> getAll(){
         return userRepository.findAll();
     }
 

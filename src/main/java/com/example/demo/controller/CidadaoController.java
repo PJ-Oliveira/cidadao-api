@@ -13,23 +13,23 @@ public class CidadaoController {
     private CidadaoService cidadaoService;
 
     @PostMapping("/save")
-    public Cidadao addUser(@RequestBody Cidadao cidadao) {
-        return cidadaoService.createUser(cidadao);
+    public Cidadao addCidadao(@RequestBody Cidadao cidadao) {
+        return cidadaoService.create(cidadao);
     }
 
     @GetMapping("/{id}")
-    public Cidadao getUserById(@PathVariable int id) {
-        return cidadaoService.getUserById(id);
+    public Cidadao getCidadaoById(@PathVariable int id) {
+        return cidadaoService.getById(id);
     }
 
     @GetMapping("/cidadoes")
-    public List<Cidadao> getAllUsers() {
-        return cidadaoService.getAllUsers();
+    public List<Cidadao> getAll() {
+        return cidadaoService.getAll();
     }
 
 
     @DeleteMapping("/{id}")
-    public String deleteUser(@PathVariable int id) {
+    public String deleteById(@PathVariable int id) {
         return cidadaoService.deleteUserById(id);
     }
 
