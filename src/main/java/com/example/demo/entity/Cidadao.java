@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.sql.Clob;
 
 @Data
 @NoArgsConstructor
@@ -22,4 +23,6 @@ public class Cidadao {
     private String name;
     private String address;
     private String details;
+    private Clob moreInfo;
+
 }
